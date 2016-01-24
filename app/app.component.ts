@@ -28,15 +28,15 @@ import {HeroService}           from './heroes/hero.service';
     { // Crisis Center child route
         path: '/crisis-center/...',
         name: 'CrisisCenter',
-        component: CrisisCenterComponent,
-        useAsDefault: true
+        component: CrisisCenterComponent//,
+        // useAsDefault: true
     },
 
     { path: '/heroes', name: 'Heroes', component: HeroListComponent },
     { path: '/hero/:id', name: 'HeroDetail', component: HeroDetailComponent },
     { path: '/disaster', name: 'Asteroid', redirectTo: ['CrisisCenter', 'CrisisDetail', { id: 3 }] },
 
-    { path: '/login', name: 'Login', component: LoginComponent },
+    { path: '/login', name: 'Login', component: LoginComponent, useAsDefault: true },
 ])
 export class AppComponent { }
 
